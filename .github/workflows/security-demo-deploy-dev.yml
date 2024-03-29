@@ -1,0 +1,44 @@
+name: Security Demo Deploy Dev
+
+env:
+  CORRIDOR_PAYMENT_WEBAPP_NAME: app-x-corridor-payment-api
+  AZURE_WEBAPP_PACKAGE_PATH: '.' 
+  DOTNET_VERSION: '8'   
+
+on:
+  push:
+    branches: [ "develop" ]
+    paths:
+    - 'DemoApp**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: DemoApp
+    steps:
+    - uses: actions/checkout@v4.1.1
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
+
+    - name: Publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/demmo-app
+    - run: echo ${{ github.workspace }}
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        name: security-demo-demo-app
+        path: ${{env.DOTNET_ROOT}}/security-demo-demo-app
+        if-no-files-found: error
