@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KKg4mY8kg0TMqA/JBHHlKwK0M4ShwCO8NNBq7wDlh0S4hlo2mpeqKNdroaXCkCwN3tpcww3nlS5w0V6Mdkz2qQ==",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\Projects\\SecurityDemo\\DemoApp\\DemoApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sohhsnct\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512"
+  ],
+  "logs": []
+}
