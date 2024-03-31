@@ -5,6 +5,7 @@
   </ItemGroup>
 
   <PropertyGroup>
+    <UserSecretsId>InsertNewGuidHere</UserSecretsId>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
