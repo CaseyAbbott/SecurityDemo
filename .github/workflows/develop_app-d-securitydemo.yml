@@ -56,11 +56,11 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1BEF05720B014801B20300627A54A131 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_02CF43D97FA94F159CFF485CBC37A810 }}
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'app-d-securitydemo'
-          slot-name: 'Production'
-          package: .
+#      - name: Deploy to Azure Web App
+#        id: deploy-to-webapp
+#        uses: azure/webapps-deploy@v2
+#        with:
+#          app-name: 'app-d-securitydemo'
+#          slot-name: 'Production'
+#          package: .
           
