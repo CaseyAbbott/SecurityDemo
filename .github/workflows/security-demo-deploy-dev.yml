@@ -1,7 +1,7 @@
 name: Security Demo Deploy Dev
 
 env:
-  CORRIDOR_PAYMENT_WEBAPP_NAME: app-x-corridor-payment-api
+  CORRIDOR_PAYMENT_WEBAPP_NAME: app-d-securitydemo
   AZURE_WEBAPP_PACKAGE_PATH: '.' 
   DOTNET_VERSION: '8'   
 
