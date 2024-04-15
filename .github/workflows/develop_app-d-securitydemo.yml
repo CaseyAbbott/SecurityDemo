@@ -26,7 +26,12 @@ jobs:
         run: dotnet build --configuration Release
       
       - name: dotnet run
-        run: SecurityDemo.sln #ls #dotnet run --project ./DemoApp/Program.cs
+        run: dotnet run
+  shell: /usr/bin/bash -e {0}
+  env:
+    DOTNET_ROOT: /home/runner/.dotnet
+/home/runner/work/_temp/d4770486-518f-411e-a401-3ba2679930e1.sh: line 1: SecurityDemo.sln: command not found
+Error: Process completed with exit code 127.SecurityDemo.sln #ls #dotnet run --project ./DemoApp/Program.cs
           
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
