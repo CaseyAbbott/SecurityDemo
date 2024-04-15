@@ -26,7 +26,7 @@ jobs:
         run: dotnet build --configuration Release
       
       - name: dotnet run
-        run: dotnet run --project ./DemoApp/Program.cs
+        run: ls #dotnet run --project ./DemoApp/Program.cs
           
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
