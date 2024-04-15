@@ -24,7 +24,15 @@ jobs:
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
-
+      
+      - name: Run dotnet-script
+        # You may pin to the exact commit or the version.
+        # uses: frankhaugen/frank-dotnet-script-run@ce35ed5a8a50028eb09f57fa4bc3a201caa92888
+        uses: frankhaugen/frank-dotnet-script-run@1.0
+        with:
+        # Path to the C# script file (.csx)
+          script-path: DemoApp/Program.cs
+          
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
